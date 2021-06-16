@@ -9,10 +9,10 @@ namespace QProject.Core.Extensions
   {
     public static void AddQProject(this IServiceCollection services, IConfiguration config)
     {
-      services.AddDbContext<MainContext>(opt =>
+      services.AddDbContext<QProjectContext>(opt =>
         opt.UseSqlServer(
               config.GetConnectionString("QProjectDb"),
-              b => b.MigrationsAssembly(typeof(MainContext).Assembly.FullName)),
+              b => b.MigrationsAssembly(typeof(QProjectContext).Assembly.FullName)),
                 ServiceLifetime.Transient);
     }
   }

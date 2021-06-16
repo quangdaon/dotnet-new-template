@@ -3,17 +3,19 @@ using QProject.Core.Models;
 
 namespace QProject.Core.Data
 {
-  public class MainContext : DbContext
+  public class QProjectContext : DbContext
   {
+    #if (IncludeSample)
     public DbSet<SampleEntity> SampleEntities { get; set; }
+    #endif
 
-    public MainContext(DbContextOptions<MainContext> options) : base(options)
+    public QProjectContext(DbContextOptions<QProjectContext> options) : base(options)
     {
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-      modelBuilder.ApplyConfigurationsFromAssembly(typeof(MainContext).Assembly);
+      modelBuilder.ApplyConfigurationsFromAssembly(typeof(QProjectContext).Assembly);
     }
   }
 }

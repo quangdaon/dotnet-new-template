@@ -11,16 +11,33 @@
   "shortName": "q.core",
   "sourceName": "QProject.Core",
   "preferNameDirectory": true,
-  "symbols": {
-    "projectName": {
-      "type": "parameter",
-      "replaces": "QProject",
-      "isRequired": true,
-      "fileRename": "QProject"
-    }
-  },
   "tags": {
     "language": "C#",
     "type": "project"
-  }
+  },
+  "symbols": {
+    "projectName": {
+      "type": "parameter",
+      "isRequired": true,
+      "replaces": "QProject",
+      "fileRename": "QProject"
+    },
+    "IncludeSample": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false"
+    }
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "condition": "(!IncludeSample)",
+          "exclude": [
+            "Models/SampleEntity.cs"
+          ]
+        }
+      ]
+    }
+  ]
 }
