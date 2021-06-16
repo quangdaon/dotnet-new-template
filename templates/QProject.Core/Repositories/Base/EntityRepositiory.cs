@@ -18,7 +18,7 @@ namespace QProject.Core.Repositories.Base
     public async Task<IEnumerable<TEntity>> GetAll()
     {
       var query = Includer(_context.Set<TEntity>());
-      return await query.ToListAsync();
+      return await query.AsNoTracking().ToListAsync();
     }
 
     public async Task<TEntity> Get(int id)
@@ -28,26 +28,19 @@ namespace QProject.Core.Repositories.Base
 
     public async Task Add(TEntity entity)
     {
-      await BeforeCreateAsync(entity);
-      await BeforeSaveAsync(entity);
       await _context.Set<TEntity>().AddAsync(entity);
     }
 
-    public async Task Delete(int id)
+    public Task Delete(TEntity entity)
     {
-      var entity = await _context.Set<TEntity>().FindAsync(id);
-      if (entity == null)
-      {
-        return;
-      }
-
       _context.Set<TEntity>().Remove(entity);
+      return Task.FromResult(default(object));
     }
 
-    public async Task Update(TEntity entity)
+    public Task Update(TEntity entity)
     {
-      await BeforeSaveAsync(entity);
       _context.Entry(entity).State = EntityState.Modified;
+      return Task.FromResult(default(object));
     }
 
     public async Task Commit()
@@ -58,16 +51,6 @@ namespace QProject.Core.Repositories.Base
     protected virtual IQueryable<TEntity> Includer(IQueryable<TEntity> query)
     {
       return query;
-    }
-
-    protected virtual Task BeforeCreateAsync(TEntity model)
-    {
-      return Task.FromResult(default(object));
-    }
-
-    protected virtual Task BeforeSaveAsync(TEntity model)
-    {
-      return Task.FromResult(default(object));
     }
   }
 }

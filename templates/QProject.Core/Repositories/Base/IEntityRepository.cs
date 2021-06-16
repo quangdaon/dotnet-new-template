@@ -10,7 +10,7 @@ namespace QProject.Core.Repositories.Base
     Task<TEntity> Get(int id);
     Task Add(TEntity entity);
     Task Update(TEntity entity);
-    Task Delete(int id);
+    Task Delete(TEntity entity);
     Task Commit();
   }
 }

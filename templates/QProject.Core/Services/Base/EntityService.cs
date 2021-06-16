@@ -18,6 +18,12 @@ namespace QProject.Core.Services.Base
     virtual public async Task<TEntity> Get(int id) => await _repo.Get(id);
     virtual public async Task Add(TEntity entity) => await _repo.Add(entity);
     virtual public async Task Update(TEntity entity) => await _repo.Update(entity);
-    virtual public async Task Delete(int id) => await _repo.Delete(id);
+    virtual public async Task Delete(int id)
+    {
+      var entity = await Get(id);
+      if(entity == null) throw new System.Exception("Boo, you suck!"); // TODO
+      
+      await _repo.Delete(entity);
+    }
   }
 }
