@@ -2,6 +2,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using QProject.Core.Data;
+#if (IncludeSample)
+using QProject.Core.Repositories;
+using QProject.Core.Services;
+#endif
 
 namespace QProject.Core.Extensions
 {
@@ -10,6 +14,7 @@ namespace QProject.Core.Extensions
     public static void AddQProject(this IServiceCollection services, IConfiguration config)
     {
       AddRepositories(services);
+      AddServices(services);
 
       services.AddDbContext<QProjectContext>(opt =>
         opt.UseSqlServer(
@@ -22,6 +27,13 @@ namespace QProject.Core.Extensions
     {
 #if (IncludeSample)
       services.AddTransient<ISampleRepository, SampleRepository>();
+#endif
+    }
+
+    private static void AddServices(IServiceCollection services)
+    {
+#if (IncludeSample)
+      services.AddTransient<ISampleService, SampleService>();
 #endif
     }
   }
