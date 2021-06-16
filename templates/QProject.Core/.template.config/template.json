@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Quangdao Nguyen",
+  "description": "Opinionated Editor Config by Quangdao Nguyen",
+  "classifications": [
+    "Common",
+    "Library"
+  ],
+  "identity": "QNguyenTemplate.CoreProject",
+  "name": "QProject Core",
+  "shortName": "q.core",
+  "sourceName": "QProject.Core",
+  "preferNameDirectory": true,
+  "symbols": {
+    "projectName": {
+      "type": "parameter",
+      "replaces": "QProject",
+      "isRequired": true,
+      "fileRename": "QProject"
+    }
+  },
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  }
+}
