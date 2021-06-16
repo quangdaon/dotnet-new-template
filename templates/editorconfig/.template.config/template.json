@@ -4,7 +4,7 @@
   "classifications": [ "Config" ],
   "identity": "QuangdaoTemplate.EditorConfig",
   "name": "Editor Config",
-  "shortName": "editconf",
+  "shortName": "q.editconf",
   "tags": {
     "type": "item"
   }
