@@ -1,8 +1,9 @@
 {
   "$schema": "http://json.schemastore.org/template",
   "author": "Quangdao Nguyen",
+	"description": "Opinionated Editor Config by Quangdao Nguyen",
   "classifications": [ "Config" ],
-  "identity": "QuangdaoTemplate.EditorConfig",
+  "identity": "QNguyenTemplate.EditorConfig",
   "name": "Editor Config",
   "shortName": "q.editconf",
   "tags": {
