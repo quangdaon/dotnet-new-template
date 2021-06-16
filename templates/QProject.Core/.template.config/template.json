@@ -36,7 +36,9 @@
           "exclude": [
             "Models/SampleEntity.cs",
             "Repositories/ISampleRepository.cs",
-            "Repositories/SampleRepository.cs"
+            "Repositories/SampleRepository.cs",
+            "Services/ISampleService.cs",
+            "Services/SampleService.cs"
           ]
         }
       ]
