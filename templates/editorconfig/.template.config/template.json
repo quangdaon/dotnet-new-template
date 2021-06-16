@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Quangdao Nguyen",
+  "classifications": [ "Config" ],
+  "identity": "QuangdaoTemplate.EditorConfig",
+  "name": "Editor Config",
+  "shortName": "editconf",
+  "tags": {
+    "type": "item"
+  }
+}
