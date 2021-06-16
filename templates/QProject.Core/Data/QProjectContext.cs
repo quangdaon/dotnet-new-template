@@ -5,10 +5,10 @@ namespace QProject.Core.Data
 {
   public class QProjectContext : DbContext
   {
-    #if (IncludeSample)
+#if (IncludeSample)
     public DbSet<SampleEntity> SampleEntities { get; set; }
-    #endif
 
+#endif
     public QProjectContext(DbContextOptions<QProjectContext> options) : base(options)
     {
     }
