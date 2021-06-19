@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Quangdao Nguyen",
+  "description": "Entity with Repository and Service by Quangdao Nguyen",
+  "classifications": [
+    "Common",
+    "Library"
+  ],
+  "identity": "QNguyenTemplate.CoreEntity",
+  "name": "QProject Entity",
+  "shortName": "q.entity",
+  "sourceName": "QProject.Core",
+  "preferNameDirectory": true,
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "symbols": {
+    "projectName": {
+      "type": "parameter",
+      "isRequired": true,
+      "replaces": "QProject",
+      "fileRename": "QProject"
+    },
+    "entity": {
+      "type": "parameter",
+      "isRequired": true,
+      "replaces": "QProjectEntity",
+      "fileRename": "QProjectEntity"
+    }
+  }
+}

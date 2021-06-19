@@ -1,7 +1,7 @@
 {
   "$schema": "http://json.schemastore.org/template",
   "author": "Quangdao Nguyen",
-  "description": "Opinionated Editor Config by Quangdao Nguyen",
+  "description": "Core Project Template by Quangdao Nguyen",
   "classifications": [
     "Common",
     "Library"
