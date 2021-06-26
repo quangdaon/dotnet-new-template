@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Quangdao Nguyen",
+	"description": "Opinionated Prettier Config by Quangdao Nguyen",
+  "classifications": [ "Config" ],
+  "identity": "QNguyenTemplate.PrettierConfig",
+  "name": "Prettier Config",
+  "shortName": "q.prettier",
+  "tags": {
+    "type": "item"
+  }
+}
