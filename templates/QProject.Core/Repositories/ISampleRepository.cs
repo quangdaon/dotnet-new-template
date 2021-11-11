@@ -1,4 +1,4 @@
-using QProject.Core.Models;
+using QProject.Core.Entities;
 using QProject.Core.Repositories.Base;
 
 namespace QProject.Core.Repositories
