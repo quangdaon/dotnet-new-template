@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using QProject.Core.Models.Base;
+using QProject.Core.Entities.Base;
 using QProject.Core.Repositories.Base;
 
 namespace QProject.Core.Services.Base

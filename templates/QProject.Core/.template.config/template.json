@@ -34,7 +34,8 @@
         {
           "condition": "(!IncludeSample)",
           "exclude": [
-            "Models/SampleEntity.cs",
+            "Entities/SampleEntities.cs",
+            "Models/SampleModel.cs",
             "Repositories/ISampleRepository.cs",
             "Repositories/SampleRepository.cs",
             "Services/ISampleService.cs",

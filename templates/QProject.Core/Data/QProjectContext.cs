@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using QProject.Core.Models;
+using QProject.Core.Entities;
 
 namespace QProject.Core.Data
 {
